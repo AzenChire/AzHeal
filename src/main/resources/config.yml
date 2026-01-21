@@ -1,0 +1,13 @@
+Options:
+  AutoFeed: true # Defines whether the player should also be fed
+  PlaySound: true # Define whether a sound should be played?
+
+Messages:
+  Heal: "&aYou've been successfully healed!"
+  HealedTarget: "&aYou've just healed [target]"
+  GotHealed: "&aYou've just been healed by [player]"
+  OfflinePlayer: "&4This player is not online or does not exist!"
+  NoPerms: "&4You don't have the permissions!"
+  Console: "&4Only players can execute this command!"
+
+# You can use [player] and [target], which will be replaced by their names.

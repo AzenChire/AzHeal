@@ -1,0 +1,8 @@
+name: FlowHeal
+version: '1.0-SNAPSHOT'
+main: fr.azenchire.flowheal.HealFlow
+api-version: '1.13'
+authors: [ AzenChire ]
+website: https://discord.com/invite/4nzzkS8beg
+commands:
+  heal:
