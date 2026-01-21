@@ -46,7 +46,6 @@ Messages:
 | Command          | Description                |
 | ---------------- | -------------------------- |
 | `/heal`          | Heals yourself or a player |
-| `/azheal reload` | Reloads the config file    |
 
 ## 🌍 Language Support
 
