@@ -1,9 +1,9 @@
-package fr.azenchire.flowheal;
+package fr.azenchire.azheal;
 
-import fr.azenchire.flowheal.Commands.Heal;
+import fr.azenchire.azheal.Commands.Heal;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class HealFlow extends JavaPlugin {
+public final class AzHeal extends JavaPlugin {
 
     @Override
     public void onEnable() {

@@ -1,9 +1,8 @@
-package fr.azenchire.flowheal.Commands;
+package fr.azenchire.azheal.Commands;
 
 import com.cryptomorin.xseries.XSound;
-import fr.azenchire.flowheal.HealFlow;
+import fr.azenchire.azheal.AzHeal;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,10 +10,10 @@ import org.bukkit.entity.Player;
 
 public class Heal implements CommandExecutor {
 
-    private final HealFlow main;
+    private final AzHeal main;
 
-    public Heal(HealFlow healFlow) {
-        this.main = healFlow;
+    public Heal(AzHeal azHeal) {
+        this.main = azHeal;
     }
 
     @Override
@@ -28,7 +27,7 @@ public class Heal implements CommandExecutor {
         Player player = (Player) sender;
 
         if (args.length == 0) {
-            if (player.hasPermission("flowheal.use")) {
+            if (player.hasPermission("azheal.use")) {
                 healPlayer(player);
                 player.sendMessage(main.getConfig().getString("Messages.Heal").replace("&", "§"));
             }
@@ -41,7 +40,7 @@ public class Heal implements CommandExecutor {
 
             Player target = Bukkit.getPlayerExact(args[0]);
 
-            if (player.hasPermission("flowheal.target")) {
+            if (player.hasPermission("azheal.target")) {
                 if (target != null) {
                     healPlayer(target);
                     player.sendMessage(main.getConfig().getString("Messages.HealedTarget")

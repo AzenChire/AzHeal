@@ -37,7 +37,7 @@
                         <relocation>
                             <pattern>com.cryptomorin.xseries</pattern>
                             <!-- Be sure to change the package below -->
-                            <shadedPattern>fr.azenchire.flowheal</shadedPattern>
+                            <shadedPattern>fr.azenchire.azheal</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
