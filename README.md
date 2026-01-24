@@ -6,9 +6,12 @@ Heal yourself or heal another player instantly! ❤️
 
 * Heal yourself with a simple command
 * Heal other players easily
-* Configurable heal amount and behavior
-* Customizable message when healing
-* Enable or disable each feature from `config.yml`
+* Optional **health refill** and **hunger refill**
+* **Auto-heal on join** (optional)
+* **Sound effect** when using `/heal` (optional + configurable)
+* **Customizable messages** (with prefix support)
+* **Permissions support**
+* **Update checker** (optional)
 * Lightweight and easy to use
 
 ## 📥 Installation
@@ -23,29 +26,47 @@ Heal yourself or heal another player instantly! ❤️
 Here is the default `config.yml`:
 
 ```yaml
-Options:
-  AutoFeed: true # Defines whether the player should also be fed
-  PlaySound: true # Define whether a sound should be played?
+heal:
+  health: true
+  hunger: true
+  on-join: true
+  sound:
+    enabled: true
+    name: ENTITY_PLAYER_LEVELUP
+    volume: 1.0
+    pitch: 1.0
 
-Messages:
-  Heal: "&aYou've been successfully healed!"
-  HealedTarget: "&aYou've just healed [target]"
-  GotHealed: "&aYou've just been healed by [player]"
-  OfflinePlayer: "&4This player is not online or does not exist!"
-  NoPerms: "&4You don't have the permissions!"
-  Console: "&4Only players can execute this command!"
+update-check:
+  enabled: true
 
-# You can use [player] and [target], which will be replaced by their names.
-```
+messages:
+  prefix: "&d[AzHeal]&r "
+  no-permission: "&cYou don't have permission."
+  reloaded: "&aConfig reloaded."
+  player-only: "&cOnly players can use this command."
+  healed-self: "&aYou have been healed!"
+  heal-error: "&cAn error occurred."
+  heal-on-join: "&aYou have been healed on join!"
+````
 
 ✅ [Click here for a list of Minecraft sounds](https://minecraft.fandom.com/wiki/Sounds.json)
 ✅ [Click here for Minecraft color codes](https://minecraft.fandom.com/wiki/Formatting_codes)
 
 ## 💬 Commands
 
-| Command          | Description                |
-| ---------------- | -------------------------- |
-| `/heal`          | Heals yourself or a player |
+| Command | Description                |
+| ------- | -------------------------- |
+| `/heal` | Heals yourself or a player |
+
+## 🔐 Permissions
+
+| Permission      | Description                                |
+| --------------- | ------------------------------------------ |
+| `azheal.use`    | Allows using `/heal`                       |
+| `azheal.reload` | Allows using `/azheal reload`              |
+| `azheal.onjoin` | Allows auto-heal on join                   |
+
+> If you don’t use a permissions plugin, OP players can still use the commands by default.
 
 ## 🌍 Language Support
 
